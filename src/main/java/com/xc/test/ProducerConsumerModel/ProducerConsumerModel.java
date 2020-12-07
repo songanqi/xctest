@@ -78,8 +78,8 @@ class EventStorage {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println("拿到了" + storage.poll() + ", 现在仓库还剩下" + storage.size());
-            notify();
         }
+        System.out.println("拿到了" + storage.poll() + ", 现在仓库还剩下" + storage.size());
+        notify();
     }
 }
