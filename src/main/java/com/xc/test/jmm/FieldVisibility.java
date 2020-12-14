@@ -1,11 +1,11 @@
 package com.xc.test.jmm;
 
 /**
- * 演示可见性带来的问题
+ * 演示可见性带来的问题  加volatile可避免
  */
 public class FieldVisibility {
-     int a = 1;
-     int b = 2;
+     volatile int a = 1;
+     volatile int b = 2;
 
      private void change() {
          a = 3;
