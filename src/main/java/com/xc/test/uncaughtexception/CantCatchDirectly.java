@@ -1,6 +1,5 @@
 package com.xc.test.uncaughtexception;
 
-import sun.tools.jconsole.ProxyClient;
 
 /**
  * 1.不加try catch 抛出4个异常,都带线程名字
