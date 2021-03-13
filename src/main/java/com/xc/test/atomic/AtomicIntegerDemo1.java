@@ -13,12 +13,12 @@ public class AtomicIntegerDemo1 implements Runnable {
 
     public void incrementAtomic() {
         // 自增
-//        atomicInteger.getAndIncrement();
+        atomicInteger.getAndIncrement();
 
         // 自减
 //        atomicInteger.getAndDecrement();
 
-        atomicInteger.getAndAdd(-90);
+//        atomicInteger.getAndAdd(-90);
     }
 
     private static volatile int basicCount = 0;
@@ -42,7 +42,8 @@ public class AtomicIntegerDemo1 implements Runnable {
 
     @Override
     public void run() {
-        for (int i = 0; i < 10000; i++) {
+        for (int i = 0; i < 100; i++) {
+            System.out.println("######################" + atomicInteger.get());
             incrementAtomic();
             incrementBasic();
         }
